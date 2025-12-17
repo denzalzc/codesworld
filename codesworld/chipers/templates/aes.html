@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block add_css %}
+<link rel="stylesheet" href="{% static 'css/basecipher.css' %}">
+{% endblock add_css %}
+
+{% block content %}
+
+<main class="main-container">
+    <form class="content-form" method="post" action="/preventdefault">
+        <h2>Метод - AES</h2>
+        {%csrf_token %}
+        <div class="form-group">
+            <label for="text-input">Введите текст</label>
+            <textarea id="text-input" placeholder="Здесь ваш текст..." rows="12"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="key-input">Ключ</label>
+            <input type="text" id="key-input" placeholder="Ключ для кодирования" />
+        </div>
+        <div class="form-group">
+            <label for="text-input">Введите текст</label>
+            <textarea id="text-output" placeholder="Результат..." rows="12" disabled></textarea>
+        </div>
+        <div class="buttons-group">
+            <button type="submit" class="btn encode-btn">Закодировать</button>
+            <button type="submit" class="btn decode-btn">Раскодировать</button>
+        </div>
+    </form>
+</main>
+
+<div id="encode_tag" style="display: none;">aesencode</div>
+<div id="decode_tag" style="display: none;">aesdecode</div>
+
+{% endblock content %}
+
+{% block add_js %}
+<script src="{% static 'js/cipher_base.js' %}"></script>
+{% endblock add_js %}

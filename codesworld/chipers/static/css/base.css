@@ -1,0 +1,21 @@
+/* Для всего документа */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* минимальная высота — весь экран */
+}
+
+/* Контент растягивается, чтобы заполнять пространство между шапкой и подвалом */
+.content-container {
+  flex: 1; /* занимает всё доступное место */
+}
+
+/* Подвал */
+.site-footer {
+  margin-top: auto; /* подталкивает его вниз */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}

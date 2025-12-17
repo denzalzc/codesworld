@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block add_css %}
+<link rel="stylesheet" href="{% static 'css/ciphermain.css' %}">
+{% endblock add_css %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Выберите метод шифрования</h1>
+
+    <div class="method-card">
+        <div class="method-title">Подмена </div>
+        <div class="method-description">
+            Простой метод шифрования, основанный на подстановке символов по заданной карте (ключу).
+        </div>
+        <a href="{% url 'subs' %}" class="btn">Перейти к подмене</a>
+    </div>
+
+    <div class="method-card">
+        <div class="method-title">Метод — Смарт-конверсия</div>
+        <div class="method-description">
+            Использует сложные алгоритмы преобразования текста, чтобы сделать шифрование более надежным.
+        </div>
+        <a href="{% url 'aes' %}" class="btn">Перейти к смарт-кодированию</a>
+    </div>
+
+    <div class="method-card">
+        <div class="method-title">Метод - Шифр Цезаря</div>
+        <div class="method-description">
+            Классический шифр с сдвигом символов на фиксированное число.
+        </div>
+        <a href="{% url 'cesar' %}" class="btn">Перейти к Цезарю</a>
+    </div>
+</div>
+
+{% endblock content %}
