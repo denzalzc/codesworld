@@ -1,4 +1,4 @@
-cp nginx.art /etc/nginx/sites-available
+cp nginx.art /etc/nginx/sites-available/codesworld
 nginx -t
 .././venv/bin/python3 manage.py collectstatic
 DJANGO_DEBUG=False

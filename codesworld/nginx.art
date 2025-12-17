@@ -7,10 +7,6 @@ server {
         alias /home/codesworld/codesworld/staticfiles/;
     }
 
-    location /media/ {
-        alias /home/margo_art/margoArt/media/;
-    }
-
     location / {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
