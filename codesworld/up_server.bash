@@ -1,5 +1,7 @@
 cp nginx.art /etc/nginx/sites-available/codesworld
 nginx -t
+systemctl reload nginx
+service nginx reload
 sudo ln -s /etc/nginx/sites-available/codesworld /etc/nginx/sites-enabled/
 .././venv/bin/python3 manage.py collectstatic
 DJANGO_DEBUG=False
