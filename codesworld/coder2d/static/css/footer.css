@@ -1,0 +1,9 @@
+/* Стили подвала */
+.site-footer {
+  background-color: #34495e;
+  color: #bdc3c7;
+  padding: 15px 30px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: auto;
+}

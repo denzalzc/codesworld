@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 import json
+import barcode
 import random
 import os
 import base64
@@ -190,6 +191,8 @@ def decrypt_aes(ciphertext_b64, password):
     return plaintext_bytes.decode()
 
 # urls
+
+#ciphers
 def ciphermain(request):
     return render(request, 'ciphermain.html')
 
@@ -201,6 +204,7 @@ def subs(request):
 
 def aes(request):
     return render(request, 'aes.html')
+
 
 # api
 def cesar_encode(request):
@@ -308,3 +312,8 @@ def aes_decode(request):
             return JsonResponse({'result': "NOTINT"}) # on js side need to predict wrong data
         
     
+
+
+
+
+

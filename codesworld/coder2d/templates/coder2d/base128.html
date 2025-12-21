@@ -1,0 +1,34 @@
+{% extends 'coder2d/base.html' %}
+{% load static %}
+
+{% block add_css %}
+<link rel="stylesheet" href="{% static 'css/base2d.css' %}">
+{% endblock add_css %}
+
+{% block content %}
+
+<main class="main-container">
+    <form class="content-form" method="post" action="/preventdefault">
+        <h2>Base 128 (Basic BarCode)</h2>
+        {%csrf_token %}
+        <div class="form-group">
+            <label for="text-input">Введите текст</label>
+            <textarea id="text-input" placeholder="Здесь ваш текст..." rows="12"></textarea>
+        </div>
+        <div class="form-group cont">
+            <img id="result-image" src="{% static 'images/test.jpg' %}" alt="">
+            <div id="result-info"></div>
+        </div>
+        <div class="buttons-group">
+            <button type="submit" class="btn encode-btn">Закодировать</button>
+        </div>
+    </form>
+</main>
+
+<div id="encode_tag" style="display: none;">base128encode</div>
+
+{% endblock content %}
+
+{% block add_js %}
+<script src="{% static 'js/code2d_base.js' %}"></script>
+{% endblock add_js %}

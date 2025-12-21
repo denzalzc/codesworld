@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from chipers.views import *
+from coder2d.views import *
 
 
+#
 cesar_paths = [
     path('ciphers/cesar/', cesar, name='cesar'),
     path('ciphers/api/cesarencode', cesar_encode, name='cesar_encode'),
@@ -37,8 +39,31 @@ aes_paths = [
     path('ciphers/api/aesdecode', aes_decode, name='aes_decode'),
 ]
 
+ciphers_paths = cesar_paths + subs_paths + aes_paths
+#
+
+code128_paths = [
+    path('2D/base128', base128, name='base128'),
+    path('2D/api/base128encode', base128_encode, name='base128_encode')
+]
+
+qr_paths = [
+    path('2D/qr', qr, name='qr'),
+    path('2D/api/qrencode', qr_encode, name='qr_encode')
+]
+
+datamatrix_paths = [
+    path('2D/datamatrix', datamatrix, name='datamatrix'),
+    path('2D/api/datamatrixencode', datamatrix_encode, name='datamatrix_encode')
+]
+
+
+
+paths_2d = code128_paths + qr_paths + datamatrix_paths
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ciphers/', ciphermain, name='ciphermain'),
-] + cesar_paths + subs_paths + aes_paths
+] + ciphers_paths + paths_2d

@@ -1,0 +1,28 @@
+/* Стили для шапки */
+.site-header {
+  background-color: #34495e;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.site-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navigation a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #f39c12;
+}
