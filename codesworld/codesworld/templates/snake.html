@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Классическая Змейка</title>
+    <link rel="stylesheet" href="{% static 'css/snake.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1><i class="fas fa-gamepad"></i> Классическая Змейка</h1>
+            <p class="game-subtitle">Управляйте змейкой, собирайте еду и не врезайтесь!</p>
+        </header>
+
+        <main class="game-container">
+            <div class="game-wrapper">
+                <div class="game-info">
+                    <div class="score-board">
+                        <div class="score-item">
+                            <span class="score-label">Счет:</span>
+                            <span id="score" class="score-value">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Рекорд:</span>
+                            <span id="high-score" class="score-value">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Скорость:</span>
+                            <span id="speed" class="score-value">Средняя</span>
+                        </div>
+                    </div>
+
+                    <div class="controls-info">
+                        <h3><i class="fas fa-keyboard"></i> Управление</h3>
+                        <div class="controls-grid">
+                            <div class="control-item">
+                                <kbd>↑</kbd> <span>Вверх</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>↓</kbd> <span>Вниз</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>←</kbd> <span>Влево</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>→</kbd> <span>Вправо</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>Пробел</kbd> <span>Пауза</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>R</kbd> <span>Рестарт</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-stats">
+                        <h3><i class="fas fa-chart-line"></i> Статистика</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Длина змейки:</span>
+                                <span id="snake-length" class="stat-value">3</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Съедено еды:</span>
+                                <span id="food-eaten" class="stat-value">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Время игры:</span>
+                                <span id="game-time" class="stat-value">0 сек</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <canvas id="game-canvas" width="600" height="600"></canvas>
+
+                    <div class="game-controls">
+                        <div class="speed-controls">
+                            <h4>Скорость игры:</h4>
+                            <div class="speed-buttons">
+                                <button id="slow-speed" class="speed-btn">Медленно</button>
+                                <button id="medium-speed" class="speed-btn active">Средне</button>
+                                <button id="fast-speed" class="speed-btn">Быстро</button>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button id="start-btn" class="action-btn start-btn">
+                                <i class="fas fa-play"></i> Старт
+                            </button>
+                            <button id="pause-btn" class="action-btn pause-btn">
+                                <i class="fas fa-pause"></i> Пауза
+                            </button>
+                            <button id="restart-btn" class="action-btn restart-btn">
+                                <i class="fas fa-redo"></i> Рестарт
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-controls">
+                <h3><i class="fas fa-mobile-alt"></i> Управление на телефоне</h3>
+                <div class="mobile-controls-grid">
+                    <button id="up-btn" class="mobile-btn up-btn"><i class="fas fa-chevron-up"></i></button>
+                    <div class="mobile-row">
+                        <button id="left-btn" class="mobile-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+                        <div class="mobile-center"></div>
+                        <button id="right-btn" class="mobile-btn right-btn"><i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <button id="down-btn" class="mobile-btn down-btn"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-message" id="game-message">
+            <div class="message-content">
+                <h2 id="message-title">Готовы начать?</h2>
+                <p id="message-text">Нажмите кнопку "Старт" или пробел, чтобы начать игру</p>
+                <button id="message-btn" class="action-btn start-btn">Начать игру</button>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <p>Игра "Змейка" на чистом JavaScript | Управление: стрелки или WASD</p>
+            <p class="footer-note">Соберите максимум еды и установите новый рекорд!</p>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/snake.js' %}"></script>
+</body>
+
+</html>
