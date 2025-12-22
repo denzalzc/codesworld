@@ -14,6 +14,9 @@ import math
 
 
 # 2D
+def main2D(request):
+    return render(request, 'coder2d/2Dmain.html')
+
 def base128(request):
     return render(request, 'coder2d/base128.html')
 

@@ -1,0 +1,40 @@
+{% extends 'coder2d/base.html' %}
+{% load static %}
+
+{% block add_css %}
+<link rel="stylesheet" href="{% static 'css/2Dmain.css' %}">
+{% endblock add_css %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Выберите тип 2D кода</h1>
+    <div class="method-card">
+        <div class="method-title">Штрих-код (BarCode)</div>
+        <div class="method-description">
+            Линейный (одномерный) код для представления данных в виде параллельных линий различной ширины.
+            Подходит для розничной торговли и инвентаризации.
+        </div>
+        <a href="{% url 'base128' %}" class="btn">Перейти к созданию штрих-кода</a>
+    </div>
+
+    <div class="method-card">
+        <div class="method-title">QR-код</div>
+        <div class="method-description">
+            Популярный двумерный матричный код с высокой скоростью чтения и возможностью хранения
+            различных типов данных (ссылки, текст, контакты).
+        </div>
+        <a href="{% url 'qr' %}" class="btn">Перейти к созданию QR-кода</a>
+    </div>
+
+    <div class="method-card">
+        <div class="method-title">Data Matrix</div>
+        <div class="method-description">
+            Компактный двумерный матричный код с высокой плотностью данных.
+            Идеально подходит для маркировки мелких предметов и промышленного применения.
+        </div>
+        <a href="{% url 'datamatrix' %}" class="btn">Перейти к созданию Data Matrix</a>
+    </div>
+</div>
+
+{% endblock content %}
