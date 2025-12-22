@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from chipers.views import *
 from coder2d.views import *
+from .views import index
 
 
 #
@@ -64,6 +65,7 @@ paths_2d = code128_paths + qr_paths + datamatrix_paths
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='home'),
     path('ciphers/', ciphermain, name='ciphermain'),
     path('2D', main2D, name='main2D'),
 ] + ciphers_paths + paths_2d

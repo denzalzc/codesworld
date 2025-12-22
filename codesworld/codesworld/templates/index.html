@@ -1,0 +1,269 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodesWorld - Мир кодирования</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>CodesWorld</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Главная</a></li>
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#apps">Приложения</a></li>
+                    <li><a href="#features">Возможности</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Добро пожаловать в <span class="highlight">CodesWorld</span></h1>
+                    <p class="hero-subtitle">Исследуйте мир кодирования, шифрования и преобразования данных</p>
+                    <p class="hero-description">
+                        CodesWorld - это платформа, объединяющая различные инструменты и методы кодирования информации.
+                        От классических шифров до современных 2D кодов - здесь вы найдете все необходимое для работы с
+                        закодированными данными.
+                    </p>
+                    <a href="#apps" class="cta-button">Исследовать приложения</a>
+                </div>
+                <div class="hero-image">
+                    <div class="code-visual">
+                        <div class="visual-element">
+                            <i class="fas fa-lock"></i>
+                            <span>Шифрование</span>
+                        </div>
+                        <div class="visual-element">
+                            <i class="fas fa-qrcode"></i>
+                            <span>2D Коды</span>
+                        </div>
+                        <div class="visual-element">
+                            <i class="fas fa-cogs"></i>
+                            <span>Инструменты</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">О CodesWorld</h2>
+                <p class="section-subtitle">
+                    Наша миссия - создать комплексную платформу для всех видов кодирования информации
+                </p>
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>Доступность</h3>
+                        <p>Инструменты для кодирования должны быть доступны каждому, независимо от уровня подготовки.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Расширяемость</h3>
+                        <p>Платформа постоянно развивается, добавляются новые приложения и методы кодирования.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Обучение</h3>
+                        <p>Мы не только предоставляем инструменты, но и помогаем понять принципы их работы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apps" id="apps">
+            <div class="container">
+                <h2 class="section-title">Наши приложения</h2>
+                <p class="section-subtitle">
+                    Исследуйте уже доступные инструменты и следите за появлением новых
+                </p>
+                <div class="apps-grid">
+                    <a href="/ciphers" class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Шифрование текста</h3>
+                        <p>Классические и современные методы шифрования текстовой информации</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Подмена</span>
+                            <span class="feature-tag">Шифр Цезаря</span>
+                            <span class="feature-tag">AES</span>
+                        </div>
+                        <div class="app-link">
+                            Перейти <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="/2D" class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-barcode"></i>
+                        </div>
+                        <h3>2D Коды</h3>
+                        <p>Генерация и работа с различными типами двумерных кодов</p>
+                        <div class="app-features">
+                            <span class="feature-tag">QR-код</span>
+                            <span class="feature-tag">Data Matrix</span>
+                            <span class="feature-tag">Штрих-код</span>
+                        </div>
+                        <div class="app-link">
+                            Перейти <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <div class="app-card coming-soon">
+                        <div class="app-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>Новые приложения</h3>
+                        <p>Следите за обновлениями! В разработке новые инструменты для кодирования.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Скоро</span>
+                            <span class="feature-tag">В разработке</span>
+                        </div>
+                        <div class="app-link">
+                            Ожидайте <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Возможности платформы</h2>
+                <p class="section-subtitle">
+                    CodesWorld предлагает удобные инструменты для работы с кодированием
+                </p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <div class="feature-content">
+                            <h3>Интуитивный интерфейс</h3>
+                            <p>Простое и понятное управление даже для новичков в области кодирования.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <div class="feature-content">
+                            <h3>Разнообразие методов</h3>
+                            <p>Широкий выбор алгоритмов и подходов к кодированию информации.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <div class="feature-content">
+                            <h3>Образовательный подход</h3>
+                            <p>Подробные объяснения принципов работы каждого метода кодирования.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">04</div>
+                        <div class="feature-content">
+                            <h3>Постоянное развитие</h3>
+                            <p>Регулярное добавление новых инструментов и улучшение существующих.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Начните исследовать мир кодирования</h2>
+                <p>Выберите приложение, которое соответствует вашим задачам, или следите за появлением новых
+                    инструментов</p>
+                <div class="cta-buttons">
+                    <a href="/ciphers/" class="cta-button secondary">Шифрование текста</a>
+                    <a href="/2d/" class="cta-button secondary">2D Коды</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>CodesWorld</span>
+                </div>
+                <p class="footer-tagline">Платформа для всех видов кодирования информации</p>
+                <div class="footer-links">
+                    <a href="#home">Главная</a>
+                    <a href="#about">О проекте</a>
+                    <a href="#apps">Приложения</a>
+                    <a href="#features">Возможности</a>
+                </div>
+                <p class="copyright">© 2025 CodesWorld. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Изменение активного пункта меню при прокрутке
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

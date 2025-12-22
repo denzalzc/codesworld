@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chipers',
-    'coder2d'
+    'coder2d',
+    'codesworld'
 ]
 
 MIDDLEWARE = [
