@@ -62,7 +62,6 @@ datamatrix_paths = [
 paths_2d = code128_paths + qr_paths + datamatrix_paths
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ciphers/', ciphermain, name='ciphermain'),

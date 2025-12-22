@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         resultImage.src = `${data.format},${data.image}`;
 
                         resultImage.addEventListener('click', (e) => {
-                            window.open(`${data.format},${data.image}`, '_blank').focus()
+                            window.open(`${resultImage.src}`).focus()
                         })
 
                         resultInfo.innerHTML = `<span>Вес файла ${data['file_size']} килобайт</span`

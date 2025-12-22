@@ -103,9 +103,10 @@ textarea:focus {
 } 
 
 #result-image {
-  width: 50%;
+  width: 30%;
+  height: 30%;
   max-width: 50%;
-  max-height: 10%;
+  max-height: 50%;
 }
 
 
